@@ -12,7 +12,7 @@ import (
 	"fmt"
 )
 
-type ProcessFunc func(context.Context, image.Image) (image.Image, string, error)
+type ProcessFunc func(context.Context, image.Image, string) (image.Image, string, error)
 
 func Process(ctx context.Context, dec decode.Decoder, cb ProcessFunc, paths ...string) error {
 
@@ -36,7 +36,7 @@ func Process(ctx context.Context, dec decode.Decoder, cb ProcessFunc, paths ...s
 
 		// END OF something like go-image-reader
 
-		im, new_path, err := cb(ctx, im)
+		im, new_path, err := cb(ctx, im, path)
 		
 		if err != nil {
 			return err
