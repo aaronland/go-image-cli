@@ -1,0 +1,8 @@
+# github.com/aaronland/go-image-decode v0.0.1
+github.com/aaronland/go-image-decode
+# github.com/aaronland/go-image-encode v0.0.0-20200215191655-047f61aedbfe
+github.com/aaronland/go-image-encode
+# github.com/aaronland/go-roster v0.0.1
+github.com/aaronland/go-roster
+# github.com/natefinch/atomic v0.0.0-20150920032501-a62ce929ffcc
+github.com/natefinch/atomic

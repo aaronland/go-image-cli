@@ -1,0 +1,8 @@
+github.com/aaronland/go-image-decode v0.0.1 h1:X624G0eAAj8tu/pwuA01MY4wxB9sryv6hhzJrdVZo7g=
+github.com/aaronland/go-image-decode v0.0.1/go.mod h1:dOMo+O8DdvO05WCjW7Z1Yj2F9nmTncwIgij2rFMVSUQ=
+github.com/aaronland/go-image-encode v0.0.0-20200215191655-047f61aedbfe h1:28o4np7vSR9I0ezWJJbgyntSj1tuJfJWnkYh+t5HPGs=
+github.com/aaronland/go-image-encode v0.0.0-20200215191655-047f61aedbfe/go.mod h1:cYgNgNYMYq2pi85vYqoUVzXFwOOujIRULt7UbRBEnPU=
+github.com/aaronland/go-roster v0.0.1 h1:r1l4n1HfWvEtOXZvhfXX0Won9Xf6QJsigdUdzOtuy/M=
+github.com/aaronland/go-roster v0.0.1/go.mod h1:AcovpxlG1XxJxX2Fjqlm63fEIBhCjEIBV4lP87FZDmI=
+github.com/natefinch/atomic v0.0.0-20150920032501-a62ce929ffcc h1:7xGrl4tTpBQu5Zjll08WupHyq+Sp0Z/adtyf1cfk3Q8=
+github.com/natefinch/atomic v0.0.0-20150920032501-a62ce929ffcc/go.mod h1:1rLVY/DWf3U6vSZgH16S7pymfrhK2lcUlXjgGglw/lY=
