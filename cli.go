@@ -1,31 +1,31 @@
 package cli
 
 import (
-	"bytes"
 	"bufio"
+	"bytes"
 	"context"
-	"image"
+	"fmt"
 	"github.com/aaronland/go-image-decode"
 	"github.com/aaronland/go-image-encode"
 	"github.com/natefinch/atomic"
+	"image"
 	"os"
-	"fmt"
 )
 
 type ProcessFunc func(context.Context, image.Image, string) (image.Image, string, error)
 
 func Process(ctx context.Context, cb ProcessFunc, paths ...string) error {
 
-	dec, err := decode.ImageDecoder(ctx, "image://")
+	dec, err := decode.NewDecoder(ctx, "image://")
 
 	if err != nil {
 		return err
 	}
-	
+
 	for _, path := range paths {
 
 		// START OF something like go-image-reader
-		
+
 		fh, err := os.Open(path)
 
 		if err != nil {
@@ -43,13 +43,13 @@ func Process(ctx context.Context, cb ProcessFunc, paths ...string) error {
 		// END OF something like go-image-reader
 
 		im, new_path, err := cb(ctx, im, path)
-		
+
 		if err != nil {
 			return err
 		}
 
 		// START OF something like go-image-writer
-		
+
 		enc_uri := fmt.Sprintf("%s://", format)
 		enc, err := encode.NewEncoder(ctx, enc_uri)
 
