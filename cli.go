@@ -14,8 +14,14 @@ import (
 
 type ProcessFunc func(context.Context, image.Image, string) (image.Image, string, error)
 
-func Process(ctx context.Context, dec decode.Decoder, cb ProcessFunc, paths ...string) error {
+func Process(ctx context.Context, cb ProcessFunc, paths ...string) error {
 
+	dec, err := decode.ImageDecoder(ctx, "image://")
+
+	if err != nil {
+		return err
+	}
+	
 	for _, path := range paths {
 
 		// START OF something like go-image-reader
